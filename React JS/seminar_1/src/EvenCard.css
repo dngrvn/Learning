@@ -1,0 +1,9 @@
+.evenCard {
+  border: 1px solid #c73535;
+  width: 600px;
+  margin: 10px auto;
+}
+
+.evenCard_title, .evenCard_description, .evenCard_date {
+  color: blue;
+}
