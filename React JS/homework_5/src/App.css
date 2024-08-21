@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  padding-top: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.white {
+  background: white;
+  color: black;
+}
+
+.dark {
+  height: 100vh;
+  background: black;
+  color: white;
+}
+
+button {
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
