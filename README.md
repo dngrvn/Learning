@@ -7,5 +7,5 @@
 | 4 | **[Task4](https://github.com/dngrvn/Learning/React JS/homework_4)** | Children. Роутинг в React |
 | 5 | **[Task5](https://github.com/dngrvn/Learning/React JS/homework_5)** | Компоненты высшего порядка знакомство с Redux |
 | 6 | **[Task6](https://github.com/dngrvn/Learning/React JS/homework_6)** | Погружение в Redux. Connect |
-| 7 | **[Task7](https://github.com/dngrvn/Learning/React JS/homework_7)** | Redux middlewares. Redux persist |
-| 8 | **[Task8](https://github.com/dngrvn/Learning/React JS/homework_8_itog)** | Работа с API |
+| 7 | **[Task7](https://github.com/dngrvn/Learning/tree/main/React%20JS/homework_7)** | Redux middlewares. Redux persist |
+| 8 | **[Task8](https://github.com/dngrvn/Learning/tree/main/React%20JS/homework_8_itog)** | Работа с API |
