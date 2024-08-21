@@ -1,0 +1,25 @@
+{
+  "Categories": {
+      "MAN": [
+          "Accessories",
+          "Bags",
+          "Denim",
+          "T-Shirts"
+      ],
+      "WOMAN": [
+          "Accessories",
+          "Jackets & Coats",
+          "Polos",
+          "T-Shirts",
+          "Shirts"
+      ],
+      "KIDS": [
+          "Accessories",
+          "Jackets & Coats",
+          "Polos",
+          "T-Shirts",
+          "Shirts",
+          "Bags"
+      ]
+  }
+}

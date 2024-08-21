@@ -1,0 +1,20 @@
+{
+  "Offers": {
+      "FOR MEN": {
+          "link": "/catalog",
+          "describe": "HOT DEAL"
+      },
+      "FOR WOMEN": {
+          "link": "/catalog",
+          "describe": "30% OFF"
+      },
+      "FOR KIDS": {
+          "link": "/catalog",
+          "describe": "NEW ARRIVALS"
+      },
+      "ACCESORIES": {
+          "link": "/catalog",
+          "describe": "LUXIROUS & TRENDY"
+      }
+  }
+}
