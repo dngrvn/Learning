@@ -1,0 +1,15 @@
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.csproj.AssemblyReference.cache
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.AssemblyInfoInputs.cache
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.AssemblyInfo.cs
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.csproj.CoreCompileInputs.cache
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\bin\Debug\net6.0\Dop_zadacha.exe
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\bin\Debug\net6.0\Dop_zadacha.deps.json
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\bin\Debug\net6.0\Dop_zadacha.runtimeconfig.json
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\bin\Debug\net6.0\Dop_zadacha.dll
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\bin\Debug\net6.0\Dop_zadacha.pdb
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.dll
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\refint\Dop_zadacha.dll
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.pdb
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\Dop_zadacha.genruntimeconfig.cache
+C:\Users\DIANA\Desktop\C#Practikum_3\Dop_zadacha\obj\Debug\net6.0\ref\Dop_zadacha.dll
