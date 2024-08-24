@@ -1,0 +1,202 @@
+
+alex@alex-vb:~$ sudo add-apt-repository ppa:nginx/stable
+[sudo] пароль для alex:
+Репозиторий: 'deb https://ppa.launchpadcontent.net/nginx/stable/ubuntu/ jammy main'
+Описание:
+This PPA contains the latest Stable Release version of the nginx web server software.
+
+**Only Non-End-of-Life Ubuntu Releases are supported in this PPA**
+
+**Development releases of Ubuntu are not officially supported by this PPA, and uploads for those will not be available until actual final releases for those versions**
+Дополнительные сведения: https://launchpad.net/~nginx/+archive/ubuntu/stable
+Добавление репозитория.
+Нажмите [ENTER] для продолжения или Ctrl-C для отмены.
+Adding deb entry to /etc/apt/sources.list.d/nginx-ubuntu-stable-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/nginx-ubuntu-stable-jammy.list
+Adding key to /etc/apt/trusted.gpg.d/nginx-ubuntu-stable.gpg with fingerprint 8B3981E7A6852F782CC4951600A6F0A3C300EE8C
+Пол:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Сущ:2 http://kz.archive.ubuntu.com/ubuntu jammy InRelease
+Игн:3 https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy InRelease
+Пол:4 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [400 kB]
+Ошб:5 https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy Release
+  404  Not Found [IP: 2620:2d:4000:1::81 443]
+Пол:6 http://kz.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Пол:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1 142 kB]
+Пол:8 http://kz.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Пол:9 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [211 kB]
+Пол:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1 366 kB]
+Пол:11 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [567 kB]
+Пол:12 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [224 kB]
+Пол:13 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [590 kB]
+Пол:14 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [839 kB]
+Пол:15 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [160 kB]
+Пол:16 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1 366 kB]
+Пол:17 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [272 kB]
+Пол:18 http://kz.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1 412 kB]
+Пол:19 http://kz.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [233 kB]
+Пол:20 http://kz.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [687 kB]
+Пол:21 http://kz.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1 043 kB]
+Пол:22 http://kz.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [235 kB]
+Пол:23 http://kz.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24,3 kB]
+Пол:24 http://kz.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [13,4 kB]
+Чтение списков пакетов… Готово
+E: Репозиторий «https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+alex@alex-vb:~$ sudo apt-get update
+Сущ:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Сущ:2 http://kz.archive.ubuntu.com/ubuntu jammy InRelease
+Игн:3 https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy InRelease
+Сущ:4 http://kz.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Ошб:5 https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy Release
+  404  Not Found [IP: 2620:2d:4000:1::81 443]
+Сущ:6 http://kz.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Чтение списков пакетов… Готово
+E: Репозиторий «https://ppa.launchpadcontent.net/nginx/stable/ubuntu jammy Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+alex@alex-vb:~$ sudo apt-get install nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common nginx-core
+Предлагаемые пакеты:
+  fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx nginx-common nginx-core
+Обновлено 0 пакетов, установлено 9 новых пакетов, для удаления отмечено 0 пакетов, и 56 пакетов не обновлено.
+Необходимо скачать 697 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 395 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.4 [40,0 kB]
+Пол:2 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.4 [11,9 kB]
+Пол:3 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.4 [15,4 kB]
+Пол:4 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.4 [13,7 kB]
+Пол:5 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.4 [45,7 kB]
+Пол:6 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.4 [72,9 kB]
+Пол:7 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.4 [10,1 kB]
+Пол:8 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.4 [484 kB]
+Пол:9 http://kz.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.4 [3 872 B]
+Получено 697 kB за 3с (264 kB/s)
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета nginx-common.
+(Чтение базы данных … на данный момент установлено 188904 файла и каталога.)
+Подготовка к распаковке …/0-nginx-common_1.18.0-6ubuntu14.4_all.deb …
+Распаковывается nginx-common (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-http-geoip2.
+Подготовка к распаковке …/1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-http-image-filter.
+Подготовка к распаковке …/2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-http-xslt-filter.
+Подготовка к распаковке …/3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-mail.
+Подготовка к распаковке …/4-libnginx-mod-mail_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-mail (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-stream.
+Подготовка к распаковке …/5-libnginx-mod-stream_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-stream (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета libnginx-mod-stream-geoip2.
+Подготовка к распаковке …/6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета nginx-core.
+Подготовка к распаковке …/7-nginx-core_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается nginx-core (1.18.0-6ubuntu14.4) …
+Выбор ранее не выбранного пакета nginx.
+Подготовка к распаковке …/8-nginx_1.18.0-6ubuntu14.4_amd64.deb …
+Распаковывается nginx (1.18.0-6ubuntu14.4) …
+Настраивается пакет nginx-common (1.18.0-6ubuntu14.4) …
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Настраивается пакет libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) …
+Настраивается пакет libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) …
+Настраивается пакет libnginx-mod-mail (1.18.0-6ubuntu14.4) …
+Настраивается пакет libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) …
+Настраивается пакет libnginx-mod-stream (1.18.0-6ubuntu14.4) …
+Настраивается пакет libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) …
+Настраивается пакет nginx-core (1.18.0-6ubuntu14.4) …
+ * Upgrading binary nginx                                                                                        [ OK ]
+Настраивается пакет nginx (1.18.0-6ubuntu14.4) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для ufw (0.36.1-4ubuntu0.1) …
+alex@alex-vb:~$ sudo dpkg -r --force-all nginx
+(Чтение базы данных … на данный момент установлено 188992 файла и каталога.)
+Удаляется nginx (1.18.0-6ubuntu14.4) …
+alex@alex-vb:~$ sudo rm /etc/init.d/nginx
+alex@alex-vb:~$ sudo rm /usr/sbin/nginx
+alex@alex-vb:~$ dpkg -l nginx
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя            Версия       Архитектура  Описание
++++-==============-============-============-=======================================
+un  nginx          <нет>        <нет>        (описание недоступно)
+###########################################################################################################################################
+alex@alex-vb:~$ snap list
+Название                   Версия            Правка  Канал            Издатель    Примечание
+bare                       1.0               5       latest/stable    canonical✓  base
+core                       16-2.61.1         16574   latest/stable    canonical✓  core
+core20                     20231123          2105    latest/stable    canonical✓  base
+core22                     20231123          1033    latest/stable    canonical✓  base
+firefox                    122.0.1-1         3779    latest/stable/…  mozilla✓    -
+gnome-3-38-2004            0+git.efb213a     143     latest/stable/…  canonical✓  -
+gnome-42-2204              0+git.ff35a85     141     latest/stable/…  canonical✓  -
+gtk-common-themes          0.1-81-g442e511   1535    latest/stable/…  canonical✓  -
+snap-store                 41.3-71-g709398e  959     latest/stable/…  canonical✓  -
+snapd                      2.61.1            20671   latest/stable    canonical✓  snapd
+snapd-desktop-integration  0.9               83      latest/stable/…  canonical✓  -
+alex@alex-vb:~$ snap search opera
+Название                         Версия         Издатель           Примечание  Описание
+opera                            107.0.5045.15  opera-software✓    -           Fast, secure, easy-to-use browser
+opera-beta                       107.0.5045.11  opera-software✓    -           Fast and secure web browser
+opera-developer                  109.0.5069.0   opera-software✓    -           Fast and secure web browser
+opera-proxy                      1.2.4          snawoot            -           Standalone Opera VPN proxies client.
+operator-builder                 0.5.0          vmware-tanzu-labs  -           A Kubebuilder plugin to accelerate the development of Kubernetes operators.
+contasimple                      3.1.0          enriverd           -           Contasimple Desktop
+office365webdesktop              0.7.2          rafgui012          -           It is a simple desktop application for Office365 of the web version for linux
+the-battle-for-the-solar-system  1.5.0          marisag1967        -           2D mission-based space shooter
+devoperator                      1.7.1          art-hens-teeth     classic     DevOps tools
+alex@alex-vb:~$ sudo snap install opera
+opera 107.0.5045.15 от Opera (opera-software✓) установлен
+alex@alex-vb:~$ snap list
+Название                   Версия                      Правка  Канал            Издатель         Примечание
+bare                       1.0                         5       latest/stable    canonical✓       base
+chromium-ffmpeg            0.1                         37      latest/stable    canonical✓       -
+core                       16-2.61.1                   16574   latest/stable    canonical✓       core
+core18                     20231027                    2812    latest/stable    canonical✓       base
+core20                     20231123                    2105    latest/stable    canonical✓       base
+core22                     20231123                    1033    latest/stable    canonical✓       base
+firefox                    122.0.1-1                   3779    latest/stable/…  mozilla✓         -
+gnome-3-28-1804            3.28.0-19-g98f9e67.98f9e67  198     latest/stable    canonical✓       -
+gnome-3-38-2004            0+git.efb213a               143     latest/stable/…  canonical✓       -
+gnome-42-2204              0+git.ff35a85               141     latest/stable/…  canonical✓       -
+gtk-common-themes          0.1-81-g442e511             1535    latest/stable/…  canonical✓       -
+opera                      107.0.5045.15               289     latest/stable    opera-software✓  -
+snap-store                 41.3-71-g709398e            959     latest/stable/…  canonical✓       -
+snapd                      2.61.1                      20671   latest/stable    canonical✓       snapd
+snapd-desktop-integration  0.9                         83      latest/stable/…  canonical✓       -
+alex@alex-vb:~$ opera
+[17008:17008:0211/215947.034154:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
+[17008:17008:0211/215947.034181:ERROR:env.cc(257)] The platform failed to initialize.  Exiting.
+###############################################################################################################################
+alex@alex-vb:~$ nano test.txt
+alex@alex-vb:~$ crontab -e
+no crontab for alex - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/mcedit
+  4. /usr/bin/vim.tiny
+  5. /bin/ed
+
+Choose 1-5 [1]: 1
+### >>> 0 */10 * * * cp /home/username/test.txt /home/username/test.txt.bak
+crontab: installing new crontab
+
