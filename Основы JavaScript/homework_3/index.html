@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta cube="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Задание 1
+        // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
+
+        console.log('Задание 1');
+
+        const c = 2;
+        const d = 3;
+
+
+        const cube = (num) => console.log(Math.pow(num, 3));
+
+        cube(c);
+        cube(d);
+
+        // Задание 2
+        // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
+        // Создать фукнцию, которая высчитывает 13 % от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
+
+        console.log('Задание 2');
+
+        const userSalary = Number(prompt('Введите свое з/п'))
+
+        function salaryVAT(num) {
+            if (Number.isInteger(num) == false) {
+                alert('Введенное значение не является целочисленным числом, повторите попытку');
+                console.log('Введенное значение не является целочисленным числом, повторите попытку');
+            } else {
+                console.log(`Ваше з/п с учетом налога: ${num - num * 0.13 }`);
+            }
+        }
+
+        salaryVAT(userSalary);
+
+        // Задание 3
+        // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+
+        console.log('Задание 3');
+
+        function getMaxValue() {
+            let num1 = parseInt(prompt(`Введите первое число`), 10); //Если вписать текст, то выдаст Nan
+            let num2 = parseInt(prompt(`Введите второе число`), 10);
+            let num3 = parseInt(prompt(`Введите третье число`), 10);
+            if (num1 > num2 && num1 > num3) {
+                return num1;
+            } else if (num2 > num1 && num2 > num3) {
+                return num2;
+            } else {
+                return num3;
+            }
+        }
+        console.log(getMaxValue());
+
+
+        // Задание 4
+        // Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций(каждая функция выполняет одну из них):
+        //     1. Сложение
+        // 2. Разность
+        // 3. Умножение
+        // 4. Деление
+        // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6));
+        // должно вывести число 8 в консоль(sum - функция сложения в данном примере, ваши названия функций могут отличаться).Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны.Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
+
+        console.log('Задание 4');
+
+        let a = parseInt(prompt(`Введите первое число для Задания №4`), 10);
+        let b = parseInt(prompt(`Введите второе число для Задания №4`), 10);
+
+        function sum(a, b) {
+            return console.log('sum: ' + (a + b));
+        }
+
+        function difference(a, b) {
+            return console.log('difference: ' + (Math.abs(a - b)));
+        }
+
+        function multiplication(a, b) {
+            return console.log('multiplication: ' + (a * b));
+        }
+
+        function division(a, b) {
+            if (b === 0) {
+                return 0;
+            } else {
+                return console.log('multiplication: ' + (a / b));;
+            }
+        }
+        sum(a, b);
+        difference(a, b);
+        multiplication(a, b);
+        division(a, b);
+    </script>
+</body>
+
+</html>
