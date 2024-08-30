@@ -1,0 +1,268 @@
+# Урок 5. Подключение сторонних репозиториев, ручная установка пакетов
+
+Результат
+
+Текст команд, которые применялись при выполнении задания.
+Присылаем в формате текстового документа: задание и команды для решения (без вывода).
+Формат — PDF (один файл на все задания).
+
+## Задание
+
+### 1. Подключить дополнительный репозиторий на выбор: Docker, Nginx, Oracle MySQL. Установить любой пакет из этого репозитория.
+
+Выполнение:
+
+fox@love-linux:/$ sudo apt-get update
+fox@love-linux:/$ sudo apt-get install ca-certificates curl gnupg
+fox@love-linux:/$ sudo install -m 0755 -d /etc/apt/keyrings01
+fox@love-linux:/$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+fox@love-linux:/$ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+fox@love-linux:/$ echo \
+>   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+>   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+/apt/sou>   sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullecho \
+chitect>   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+ $(. /etc/o>   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+>   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+fox@love-linux:/$ sudo apt-get update
+fox@love-linux:/$  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+fox@love-linux:/$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete
+Digest: sha256:c79d06dfdfd3d3eb04cafd0dc2bacab0992ebc243e083cabe208bac4dd7759e0
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+fox@love-linux:~$ 
+
+### 2. Установить и удалить deb-пакет с помощью dpkg.
+
+Выполнение:
+
+fox@love-linux:~/Downloads$ ll
+total 90344
+drwxr-xr-x  2 fox fox     4096 Nov 30 16:03 ./
+drwxr-x--- 16 fox fox     4096 Nov 30 15:23 ../
+-rw-rw-r--  1 fox fox 92495960 Nov 30 16:03 discord-0.0.36.deb
+fox@love-linux:~/Downloads$ sudo dpkg -i discord-0.0.36.deb
+Selecting previously unselected package discord.
+(Reading database ... 188715 files and directories currently installed.)
+Preparing to unpack discord-0.0.36.deb ...
+Unpacking discord (0.0.36) ...
+Setting up discord (0.0.36) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+fox@love-linux:~/Downloads$ sudo apt -f install
+fox@love-linux:~$ apt list discord
+Listing... Done
+discord/now 0.0.36 amd64 [installed,local]
+fox@love-linux:~$ sudo dpkg -r discord
+(Reading database ... 188806 files and directories currently installed.)
+Removing discord (0.0.36) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+fox@love-linux:~$ sudo apt autoremove
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+fox@love-linux:~$ 
+
+### 3. Установить и удалить snap-пакет.
+
+Выполнение:
+
+fox@love-linux:~$ snap search steam
+Name                       Version     Publisher        Notes  Summary
+steam                      1.0.0.78    canonical✓       -      Launcher for the Steam software distribution service
+fox@love-linux:~$ sudo snap install steam
+steam 1.0.0.78 from Canonical✓ installed
+fox@love-linux:~$ sudo snap remove steam
+steam removed
+fox@love-linux:~$ 
+
+### 4. Добавить задачу для выполнения каждые 3 минуты (создание директории, запись в файл).
+
+Выполнение:
+
+fox@love-linux:~$ cd /etc
+fox@love-linux:/etc$ crontab -e
+no crontab for fox - using an empty one
+crontab: installing new crontab
+fox@love-linux:/$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+*/3 * * * * echo "Text" >> /tmp/cron.txt
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+fox@love-linux:/$
+
+### 5. *Подключить PPA-репозиторий на выбор. Установить из него пакет. Удалить PPA из системы.
+
+Выполнение:
+
+fox@love-linux:/$ sudo add-apt-repository ppa:ondrej/php
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'deb https://ppa.launchpadcontent.net/ondrej/php/ubuntu/ jammy main'
+Description:
+Co-installable PHP versions: PHP 5.6, PHP 7.x, PHP 8.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+IMPORTANT: The <foo>-backports is now required on older Ubuntu releases.
+
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
+
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Adding deb entry to /etc/apt/sources.list.d/ondrej-ubuntu-php-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/ondrej-ubuntu-php-jammy.list
+Adding key to /etc/apt/trusted.gpg.d/ondrej-ubuntu-php.gpg with fingerprint 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Hit:2 http://kz.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 https://download.docker.com/linux/ubuntu jammy InRelease
+Get:4 http://kz.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]    
+Get:5 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease [23.9 kB]       
+Get:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy/main i386 Packages [27.9 kB]
+Hit:7 http://kz.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:8 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy/main amd64 Packages [120 kB]
+Get:9 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy/main Translation-en [36.6 kB]
+Fetched 438 kB in 2s (241 kB/s)  
+Reading package lists... Done
+
+fox@love-linux:/$ apt list -a php
+Listing... Done
+php/jammy,jammy 2:8.2+93+ubuntu22.04.1+deb.sury.org+3 all
+php/jammy,jammy 2:8.1+92ubuntu1 all
+
+fox@love-linux:/$ sudo add-apt-repository --remove ppa:ondrej/php
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'deb https://ppa.launchpadcontent.net/ondrej/php/ubuntu/ jammy main'
+Description:
+Co-installable PHP versions: PHP 5.6, PHP 7.x, PHP 8.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+IMPORTANT: The <foo>-backports is now required on older Ubuntu releases.
+
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
+
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Removing repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Disabling deb entry in /etc/apt/sources.list.d/ondrej-ubuntu-php-jammy.list
+Removing disabled deb entry from /etc/apt/sources.list.d/ondrej-ubuntu-php-jammy.list
+Removing disabled deb-src entry from /etc/apt/sources.list.d/ondrej-ubuntu-php-jammy.list
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://kz.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 https://download.docker.com/linux/ubuntu jammy InRelease
+Hit:4 http://kz.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://kz.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+fox@love-linux:/$ 
+
+### 6. *Создать задачу резервного копирования (tar) домашнего каталога пользователя. Реализовать с использованием пользовательских crontab-файлов.
+
+Выполнение:
+
+fox@love-linux:/$ crontab -e
+no crontab for fox - using an empty one
+crontab: installing new crontab
+fox@love-linux:/$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+0 18 * * 1 tar -zcf /var/backups/home_fox.tgz /home/fox
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+fox@love-linux:/$
