@@ -1,0 +1,211 @@
+PS C:\Users\Alex> ssh alex@192.168.1.2
+alex@192.168.1.2's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.5.0-15-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Расширенное поддержание безопасности (ESM) для Applications выключено.
+
+51 обновление может быть применено немедленно.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Включите ESM Apps для получения дополнительных будущих обновлений безопасности.
+Смотрите https://ubuntu.com/esm или выполните: sudo pro status
+
+Last login: Fri Feb  2 19:29:59 2024 from 192.168.1.102
+alex@alex-vb:~$ whoami
+alex
+alex@alex-vb:~$ groups
+alex adm cdrom sudo dip plugdev lpadmin lxd sambashare
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/user-1 -m user-1 && sudo useradd -s /bin/bash -d /home/user-2 -m user
+-2
+alex@alex-vb:~$ tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+alex:x:1000:1000:Alex,,,:/home/alex:/bin/bash
+sshd:x:129:65534::/run/sshd:/usr/sbin/nologin
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+user-1:x:1001:1001::/home/user-1:/bin/bash
+user-2:x:1002:1002::/home/user-2:/bin/bash
+alex@alex-vb:~$ tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:alex
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+user-1:x:1001:
+user-2:x:1002:
+alex@alex-vb:~$ sudo passwd user-1
+Новый пароль:
+Повторите ввод нового пароля:
+passwd: пароль успешно обновлён
+alex@alex-vb:~$ sudo passwd user-2
+Новый пароль:
+Повторите ввод нового пароля:
+passwd: пароль успешно обновлён
+alex@alex-vb:~$ sudo tail /etc/shadow
+geoclue:*:19576:0:99999:7:::
+pulse:*:19576:0:99999:7:::
+gnome-initial-setup:*:19576:0:99999:7:::
+hplip:*:19576:0:99999:7:::
+gdm:*:19576:0:99999:7:::
+alex:$y$j9T$hA4t6KymvTlPLpP4qhL4A0$FL4Vr0ajwWKtSwjjFQaYGoPSpn84K2K4qoSaBEHBeq5:19752:0:99999:7:::
+sshd:*:19752:0:99999:7:::
+vboxadd:!:19752::::::
+user-1:$y$j9T$525IEkq5Ju8o2VvJU5skF.$O1T29KItBM9xR2jcYKP.n4I2TBO45zjggUNiMu9dxg9:19760:0:99999:7:::
+user-2:$y$j9T$/F7POCcJOpQv/PBMp2cZ5.$z14JVFDDAXsDBEJQugYYb1/P8MkBr5aYv7fVQSPWvu1:19760:0:99999:7:::
+alex@alex-vb:~$ sudo deluser --remove-home user-1 && sudo deluser --remove-home user-2
+Идёт поиск файлов для сохранения/удаления ...
+Удаляются файлы ...
+Удаляется пользователь «user-1» ...
+Предупреждение: в группе `user-1' больше никого нет.
+Готово.
+Идёт поиск файлов для сохранения/удаления ...
+Удаляются файлы ...
+Удаляется пользователь «user-2» ...
+Предупреждение: в группе `user-2' больше никого нет.
+Готово.
+alex@alex-vb:~$ tail /etc/passwd
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+alex:x:1000:1000:Alex,,,:/home/alex:/bin/bash
+sshd:x:129:65534::/run/sshd:/usr/sbin/nologin
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+alex@alex-vb:~$ tail /etc/group
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:alex
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+alex@alex-vb:~$ sudo tail /etc/shadow
+saned:*:19576:0:99999:7:::
+colord:*:19576:0:99999:7:::
+geoclue:*:19576:0:99999:7:::
+pulse:*:19576:0:99999:7:::
+gnome-initial-setup:*:19576:0:99999:7:::
+hplip:*:19576:0:99999:7:::
+gdm:*:19576:0:99999:7:::
+alex:$y$j9T$hA4t6KymvTlPLpP4qhL4A0$FL4Vr0ajwWKtSwjjFQaYGoPSpn84K2K4qoSaBEHBeq5:19752:0:99999:7:::
+sshd:*:19752:0:99999:7:::
+vboxadd:!:19752::::::
+##########################################################################################################################################################
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/mister-1 -m mister-1
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/mister-2 -m mister-2
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/miss-1 -m miss-1
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/miss-2 -m miss-2
+alex@alex-vb:~$ sudo groupadd managers
+alex@alex-vb:~$ sudo groupdel managers
+alex@alex-vb:~$ tail /etc/group
+gdm:x:134:
+lxd:x:135:alex
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+mister-1:x:1001:
+mister-2:x:1002:
+miss-1:x:1003:
+miss-2:x:1004:
+alex@alex-vb:~$ sudo groupadd groupmister
+alex@alex-vb:~$ sudo groupadd groupmiss
+alex@alex-vb:~$ tail /etc/group
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+mister-1:x:1001:
+mister-2:x:1002:
+miss-1:x:1003:
+miss-2:x:1004:
+groupmister:x:1005:
+groupmiss:x:1006:
+alex@alex-vb:~$ sudo usermod -a -G groupmister mister-1
+alex@alex-vb:~$ sudo usermod -a -G groupmister mister-2
+alex@alex-vb:~$ sudo usermod -a -G groupmiss miss-1
+alex@alex-vb:~$ sudo usermod -a -G groupmiss miss-2
+alex@alex-vb:~$ tail /etc/group
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+mister-1:x:1001:
+mister-2:x:1002:
+miss-1:x:1003:
+miss-2:x:1004:
+groupmister:x:1005:mister-1,mister-2
+groupmiss:x:1006:miss-1,miss-2
+alex@alex-vb:~$ groups mister-1
+mister-1 : mister-1 groupmister
+alex@alex-vb:~$ sudo usermod -a -G groupmiss mister-1
+alex@alex-vb:~$ groups mister-1
+mister-1 : mister-1 groupmister groupmiss
+alex@alex-vb:~$ sudo usermod -G "" mister-1
+alex@alex-vb:~$ groups mister-1
+mister-1 : mister-1
+alex@alex-vb:~$ sudo usermod -a -G groupmiss mister-1
+alex@alex-vb:~$ groups mister-1
+mister-1 : mister-1 groupmiss
+alex@alex-vb:~$ sudo usermod -a -G groupmister miss-1
+alex@alex-vb:~$ groups miss-1
+miss-1 : miss-1 groupmister groupmiss
+alex@alex-vb:~$ sudo deluser miss-1 groupmister
+Удаляется пользователь «miss-1» из группы «groupmister» ...
+Готово.
+alex@alex-vb:~$ tail /etc/group
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+mister-1:x:1001:
+mister-2:x:1002:
+miss-1:x:1003:
+miss-2:x:1004:
+groupmister:x:1005:mister-2
+groupmiss:x:1006:miss-1,miss-2,mister-1
+####################################################################################################################################################
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/newadmin -m newadmin
+alex@alex-vb:~$ groups newadmin
+newadmin : newadmin
+alex@alex-vb:~$ sudo usermod -a -G sudo newadmin
+alex@alex-vb:~$ groups newadmin
+newadmin : newadmin sudo
+alex@alex-vb:~$ sudo groupadd developer
+alex@alex-vb:~$ tail /etc/group
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:alex
+alex:x:1000:
+sambashare:x:136:alex
+vboxsf:x:999:
+vboxdrmipc:x:998:
+developer:x:1001:
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/user1 -m user1
+alex@alex-vb:~$ sudo useradd -s /bin/bash -d /home/user2 -m user2
+alex@alex-vb:~$ sudo usermod -aG developer user1
+alex@alex-vb:~$ sudo usermod -aG developer user2
+alex@alex-vb:~$ mkdir developer-dir
+alex@alex-vb:~$ chmod g=rw developer-dir/
+alex@alex-vb:~$ chmod g+s developer-dir/
+alex@alex-vb:~$ cd developer-dir/
+alex@alex-vb:~/developer-dir$ mkdir sharing-dir
+alex@alex-vb:~/developer-dir$ chmod +t sharing-dir/
