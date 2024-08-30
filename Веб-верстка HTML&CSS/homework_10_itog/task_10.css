@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+}
+
+.form__item {
+  display: flex;
+}
+
+.carousel-control-next-icon {
+  background-image: url(./img/a-right.jpg);
+}
+
+.carousel-dark .carousel-control-prev-icon {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(33%) saturate(4234%)
+    hue-rotate(359deg) brightness(94%) contrast(93%);
+}
