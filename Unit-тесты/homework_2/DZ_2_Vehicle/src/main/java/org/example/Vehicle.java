@@ -1,0 +1,15 @@
+package org.example;
+
+public abstract class Vehicle implements InterfaceMethods
+{
+    private String company;
+    private String model;
+    private int yearRelease;
+    private int numWheels;
+    private int speed;
+
+    public abstract void testDrive();
+
+    public abstract void park();
+}
+
