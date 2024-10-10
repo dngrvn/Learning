@@ -8,24 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DIANA\\.nuget\\packages\\": {}
+    "/Users/diana/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DIANA\\Desktop\\Practikum_5\\Zadacha_34\\Zadacha_34.csproj",
+      "projectUniqueName": "/Users/diana/Documents/GitHub/Learning/C#/homework_5/Zadacha_34/Zadacha_34.csproj",
       "projectName": "Zadacha_34",
-      "projectPath": "C:\\Users\\DIANA\\Desktop\\Practikum_5\\Zadacha_34\\Zadacha_34.csproj",
-      "packagesPath": "C:\\Users\\DIANA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DIANA\\Desktop\\Practikum_5\\Zadacha_34\\obj\\",
+      "projectPath": "/Users/diana/Documents/GitHub/Learning/C#/homework_5/Zadacha_34/Zadacha_34.csproj",
+      "packagesPath": "/Users/diana/.nuget/packages/",
+      "outputPath": "/Users/diana/Documents/GitHub/Learning/C#/homework_5/Zadacha_34/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DIANA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/diana/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -49,16 +50,31 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
       }
     }
   }

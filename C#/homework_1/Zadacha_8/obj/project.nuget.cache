@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "A+5NvA+zDhZWD6FEd17xEvJhUt83be8FZWbbXxyhGnEvoOtggMJH4DbIaPyH9KXybDkxk4IvKIwiGNP61XMuDA==",
+  "dgSpecHash": "hBFX7rc37s8DdgvhjIUweQbpVtkfrB2fW7OloJbP5j57HQL0WAzsXSUpVXft8KgqV1cznRO1nRZCyxTDAE0K6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DIANA\\Desktop\\C#_Practikum_1\\Zadacha_8\\Zadacha_8.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/diana/Documents/GitHub/Learning/C#/homework_1/Zadacha_8/Zadacha_8.csproj",
+  "expectedPackageFiles": [
+    "/Users/diana/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "/Users/diana/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "/Users/diana/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.31/microsoft.netcore.app.host.osx-arm64.6.0.31.nupkg.sha512"
+  ],
   "logs": []
 }
