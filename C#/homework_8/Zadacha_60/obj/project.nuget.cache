@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7vjBpAe1bKVSTGAsMv6cxT9JfXQUbAUpH4iOECOON8cZmlC9AtFLYcJJ2zUEHegIE1sjYK5d6y7O6oSK6KTv4g==",
+  "dgSpecHash": "FjC9k7eyczk=",
   "success": true,
-  "projectFilePath": "/Users/diana/Documents/GitHub/Learning/C#/homework_8/Zadacha_60/Zadacha_60.csproj",
+  "projectFilePath": "/Users/dnkrshvch/Documents/GitHub/Learning/C#/homework_8/Zadacha_60/Zadacha_60.csproj",
   "expectedPackageFiles": [
-    "/Users/diana/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
-    "/Users/diana/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
-    "/Users/diana/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.31/microsoft.netcore.app.host.osx-arm64.6.0.31.nupkg.sha512"
+    "/Users/dnkrshvch/.nuget/packages/microsoft.netcore.app.ref/6.0.35/microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
+    "/Users/dnkrshvch/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.35/microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
+    "/Users/dnkrshvch/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.35/microsoft.netcore.app.host.osx-arm64.6.0.35.nupkg.sha512"
   ],
   "logs": []
 }
